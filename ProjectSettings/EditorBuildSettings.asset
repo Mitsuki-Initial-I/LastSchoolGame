@@ -4,5 +4,71 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Main/Scene/TitleScene.unity
+    guid: dea311b9169120a4aa30016411cfcdec
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room1_MockScene.unity
+    guid: d76143aacb0b1af47becb1827db0147a
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room2_MockScene.unity
+    guid: e7dabfcb2218af34e946e48c9137bb3f
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room3_MockScene.unity
+    guid: 5185d05ba7094364fa4f9710515a742e
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room4_MockScene.unity
+    guid: 94c2c7b7fa2e65c498993b40a109c8a8
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room5_MockScene.unity
+    guid: 68ef849a2b389e649a7d09ea062f4258
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room6_MockScene.unity
+    guid: b9d2d2dbfefe0aa4f9c1638dc779c28c
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room7_MockScene.unity
+    guid: 9dc200ff8c14ea84ab411070163df433
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room8_MockScene.unity
+    guid: 25f9755707a6fb540a1b4b93fcb3609b
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room9_MockScene.unity
+    guid: 1278c91cb2ffed049a15c19e0ac3c984
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room10_MockScene.unity
+    guid: 3459c761059c89d4ba4f1ea2288d0bf0
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room11_MockScene.unity
+    guid: 2f74bf53871d8624c90695075836e648
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room12_MockScene.unity
+    guid: b132de405d8ac1b4b8a878c8063c1de7
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Room13_MockScene.unity
+    guid: a87b0f4e31cf7124981027bd2a7e09db
+  - enabled: 0
+    path: Assets/Main/Scene/Rooms/Corridor_MockScene.unity
+    guid: a3bfe01d901adb14fb587f45455c746c
+  - enabled: 1
+    path: Assets/Main/Scene/ReCre/MainHome.unity
+    guid: 8b636d444ed726f49a2ccf6cb1a8a896
+  - enabled: 1
+    path: Assets/Main/Scene/ReCre/RightRoom_Hint.unity
+    guid: 5dee782c4866f1044b2469665631c37c
+  - enabled: 1
+    path: Assets/Main/Scene/ReCre/LeftRoom_Hint.unity
+    guid: 76d0ef6a0236bd44ebc25a7f6cd05e11
+  - enabled: 1
+    path: Assets/Main/Scene/ReCre/RightRoom_Mission.unity
+    guid: ae6d42fcc0b39404797c4ded6c76f630
+  - enabled: 1
+    path: Assets/Main/Scene/ReCre/LeftRoom_Mission.unity
+    guid: bca36b66ff3d64b4ea55688d1641dbbd
+  - enabled: 1
+    path: Assets/Main/Scene/ReCre/EndRoom.unity
+    guid: d683012ee1c563047a2849e5e6997f61
+  - enabled: 1
+    path: Assets/Main/Scene/ResultScene.unity
+    guid: 06825cfce035bb846addd445ef2be4f6
   m_configObjects: {}
