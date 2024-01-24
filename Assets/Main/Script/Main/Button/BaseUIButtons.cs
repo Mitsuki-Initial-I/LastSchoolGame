@@ -8,6 +8,8 @@ namespace MainScenes
     {
         [SerializeField]
         GameObject menuPanel;
+        [SerializeField]
+        GameObject myItemPanel;
 
         IGetKeyData getKeyData;
         PlayerAction playerAction;
@@ -30,7 +32,12 @@ namespace MainScenes
 
         public void ItemButton()
         {
+            myItemPanel.SetActive(true);
+            myItemPanel.GetComponent<ItemPanel_System>().GetItem();
 
+            // プレイヤの入力モード変更
+            PlayerAction playerAction = GameObject.Find("P").GetComponent<PlayerAction>();
+            playerAction.inputMode_++;
         }
     }
 }

@@ -7,11 +7,13 @@ namespace MainScenes
             switch (itemName_)
             {
                 case ItemName_Enum.RoomKey_1:
-                    return "1†º‚ÌŒ®";
+                    return "Œ®";
                 case ItemName_Enum.RoomKey_3:
-                    return "3†º‚ÌŒ®";
+                    return "Œ®";
                 case ItemName_Enum.Password_LeftDoor_01:
-                    return "”š‚Ì‘‚©‚ê‚½† 01";
+                    return "”š‚Ì‘‚©‚ê‚½†(¶) 01";
+                case ItemName_Enum.Password_RightDoor_01:
+                    return "”š‚Ì‘‚©‚ê‚½†(‰E) 01";
                 default:
                     return "";
             }

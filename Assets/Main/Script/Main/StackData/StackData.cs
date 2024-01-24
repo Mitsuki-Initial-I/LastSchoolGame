@@ -7,7 +7,6 @@ namespace MainScenes
     public class StackData : MonoBehaviour
     {
         public static StackData instance;
-
         public int lastDoorNumber;
         private void Awake()
         {

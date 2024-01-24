@@ -5,6 +5,6 @@ namespace MainScenes
         getItem,
         noRoomKey,
         useRoomKey,
-
+        searchInformation,
     }
 }

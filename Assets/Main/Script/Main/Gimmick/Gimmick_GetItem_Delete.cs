@@ -37,6 +37,7 @@ namespace MainScenes
 
             // テキスト表示
             var commuTextData = commuTextObject.GetComponent<Communication_MainText>();
+            commuTextData.TextReset();
             commuTextData.SetText(CommunicationTextMode_Enum.getItem, getItemName);
         }
     }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 namespace MainScenes
 {
     // TODO: ギミックによって異なるはずだから修正する事(現状、オブジェクト破棄のみを行っている部分)
-    public class Passwoed_GimmickButton : ClearGimmickBase
+    public class Passwoed_GimmickButton_Delete : ClearGimmickBase
     {
         //GimmickName_Enum gimmickName_;  // ギミック名
         [SerializeField]

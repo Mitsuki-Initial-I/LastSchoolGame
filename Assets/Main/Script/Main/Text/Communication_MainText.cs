@@ -31,6 +31,9 @@ namespace MainScenes
                 case CommunicationTextMode_Enum.useRoomKey:
                     viewText = $"{text}ÇégópÇµÇΩ";
                     break;
+                case CommunicationTextMode_Enum.searchInformation:
+                    viewText = $"{text}Ç∆èëÇ©ÇÍÇƒÇ¢ÇÈ";
+                    break;
                 default:
                     break;
             }
@@ -43,6 +46,7 @@ namespace MainScenes
             TryGetComponent(out myText);
             myText.text = "";
             textMaxFlg = false;
+            cursorTextObject.SetActive(false);
         }
 
         void Start()
@@ -67,7 +71,7 @@ namespace MainScenes
                     stockText = viewText;
                     myText.text = stockText;
                 }
-                if (frameCount % textSpeed == 0)
+                else if (frameCount % textSpeed == 0)
                 {
                     stockText += viewText.Substring(textNum, 1);
                     textNum++;
