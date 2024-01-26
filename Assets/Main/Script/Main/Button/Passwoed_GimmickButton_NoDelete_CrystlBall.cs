@@ -22,11 +22,16 @@ namespace MainScenes
             var pwStr = pwNum.ToString();
             if (pwStr == "0")
             {
-                return;
+                passwordTexts[0].text = "0";
+                passwordTexts[1].text = "0";
+                passwordTexts[2].text = "0";
             }
-            for (int i = 0; i < passwordTexts.Length; i++)
+            else
             {
-                passwordTexts[i].text = pwStr.Substring(i, 1);
+                for (int i = 0; i < passwordTexts.Length; i++)
+                {
+                    passwordTexts[i].text = pwStr.Substring(i, 1);
+                }
             }
             isRight = isFlg;
         }
@@ -54,8 +59,8 @@ namespace MainScenes
                 {
                     if (canPws_L[i] == int.Parse(getPassword))
                     {
-                        StackData.instance.gameObject.GetComponent<RoomData>().lastDoorNumber_L = int.Parse(getPassword); 
-StackData.instance.gameObject.GetComponent<RoomData>().roomId_L = (RoomId_L_Enum)i+1;
+                        StackData.instance.gameObject.GetComponent<RoomData>().lastDoorNumber_L = int.Parse(getPassword);
+                        StackData.instance.gameObject.GetComponent<RoomData>().roomId_L = (RoomId_L_Enum)i + 1;
                     }
                 }
             }

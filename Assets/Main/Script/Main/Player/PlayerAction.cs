@@ -68,7 +68,7 @@ namespace MainScenes
 
             if (inputMode_ == InputMode_Enum.MovePlayerCharacter_Mode)
             {
-                bool isMoing = (getKeyData.InputKey_Horizontal() != 0 || getKeyData.InputKey_Vertical() != 0);
+                bool isMoing = getKeyData.InputKey_Horizontal() != 0 || getKeyData.InputKey_Vertical() != 0;
                 if (isMoing)
                 {
                     var moveNumData = transform.position + new Vector3(getKeyData.InputKey_Horizontal(), getKeyData.InputKey_Vertical()).normalized * moveSpeed;
@@ -79,6 +79,7 @@ namespace MainScenes
                     getGimmick.UseGimmick();
                 }
             }
+
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
