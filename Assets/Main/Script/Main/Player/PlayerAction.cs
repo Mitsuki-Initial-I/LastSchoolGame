@@ -7,6 +7,9 @@ namespace MainScenes
     public class PlayerAction : MonoBehaviour
     {
         [SerializeField]
+        Sprite[] playerSprites;
+
+        [SerializeField]
         GameObject[] door_GameObjects;
 
         [SerializeField]
@@ -18,6 +21,7 @@ namespace MainScenes
         IGetGimmick getGimmick;
         IGetKeyData getKeyData;
         Rigidbody2D rig2d;
+        SpriteRenderer sr;
 
         public InputMode_Enum inputMode_ = InputMode_Enum.MovePlayerCharacter_Mode;
 
@@ -25,6 +29,7 @@ namespace MainScenes
         {
             GameObject.Find("StackDataObject").TryGetComponent(out getKeyData);
             TryGetComponent(out rig2d);
+            TryGetComponent(out sr);
             moveSpeed = moveSpeedOffset * defaultSpeed;// Time.deltaTime;
 
             var getNumber = StackData.instance.lastDoorNumber;
@@ -53,6 +58,33 @@ namespace MainScenes
                 }
             }
         }
+        private int AnimationNumber()
+        {
+            if (getKeyData.InputKey_Horizontal() != 0)
+            {
+                return 1;
+            }
+            else if (getKeyData.InputKey_Vertical() > 0)
+            {
+                return 2;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        public Vector3 MoveRotation()
+        {
+
+            if (getKeyData.InputKey_Horizontal() < 0)
+            {
+                return new Vector3(0, 180, 0);
+            }
+            else
+            {
+                return Vector3.zero;
+            }
+        }
 
         private void Update()
         {
@@ -71,6 +103,8 @@ namespace MainScenes
                 bool isMoing = getKeyData.InputKey_Horizontal() != 0 || getKeyData.InputKey_Vertical() != 0;
                 if (isMoing)
                 {
+                    sr.sprite = playerSprites[AnimationNumber()];
+                    transform.localEulerAngles = MoveRotation();
                     var moveNumData = transform.position + new Vector3(getKeyData.InputKey_Horizontal(), getKeyData.InputKey_Vertical()).normalized * moveSpeed;
                     rig2d.MovePosition(moveNumData);
                 }
@@ -79,7 +113,6 @@ namespace MainScenes
                     getGimmick.UseGimmick();
                 }
             }
-
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
