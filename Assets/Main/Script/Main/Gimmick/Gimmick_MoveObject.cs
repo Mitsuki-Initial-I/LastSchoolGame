@@ -11,6 +11,7 @@ namespace MainScenes
         Vector2 rayPosition;
         RaycastHit2D hit;
         public LayerMask layerMask;
+        LayerMask defaultlayer;
         enum Move_dir
         {
             right,
@@ -19,7 +20,10 @@ namespace MainScenes
             down
         }
 
-
+        private void Start()
+        {
+            defaultlayer = gameObject.layer;
+        }
         public override void UseGimmick()
         {
             switch (moveDir)
@@ -30,7 +34,8 @@ namespace MainScenes
                     hit = Physics2D.Raycast(rayPosition, Vector2.right, vecLength, layerMask);
                     if (hit)
                     {
-                        if(hit.collider.tag != "wall"&& hit.collider.gameObject.layer != 6)
+                        Debug.Log(hit.collider.tag);
+                        if((hit.collider.tag != "wall"&& hit.collider.tag != "moveObj"))
                         {
                             transform.position = (Vector2)transform.position + Vector2.right;
                         }
@@ -91,10 +96,22 @@ namespace MainScenes
             }
         }
 
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                if (collision.gameObject.CompareTag("Player"))
+                {
+                    gameObject.layer = defaultlayer;
+                }
+            }
+        }
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("Player"))
             {
+                gameObject.layer = 0;
                 Vector2 playerPos = collision.transform.position;
                 if (playerPos.x+0.05<transform.position.x-transform.localScale.x/2 && playerPos.y-1< transform.position.y + transform.localScale.y / 2&& playerPos.y+0.2 > transform.position.y - transform.localScale.y / 2)
                 {
