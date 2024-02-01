@@ -10,6 +10,5 @@ namespace MainScenes
         RoomKey_3,
         Password_LeftDoor_01,
         Password_RightDoor_01,
-
     }
 }

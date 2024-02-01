@@ -15,6 +15,12 @@ namespace MainScenes
         public void StartButton()
         {
             StackData.instance.lastDoorNumber = -1;
+            SaveAndLoadSystem saveAndLoadSystem = new SaveAndLoadSystem();
+            if (saveAndLoadSystem.CheckSaveData())
+            {
+                saveAndLoadSystem.LoadSystem();
+            }
+            
             var SceneChangeSystem = new SceneChange_System();
             SceneChangeSystem.ChangeSceneSystem(MapChangeSceneName_);
         }

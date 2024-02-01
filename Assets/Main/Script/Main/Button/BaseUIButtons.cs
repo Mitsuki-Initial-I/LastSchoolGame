@@ -39,5 +39,13 @@ namespace MainScenes
             PlayerAction playerAction = GameObject.Find("P").GetComponent<PlayerAction>();
             playerAction.inputMode_++;
         }
+        public void SaveButton()
+        {
+            var SaveAndLoadSystem = new SaveAndLoadSystem();
+            SaveAndLoadSystem.SaveSystem();
+            menuPanel.SetActive(false);
+            // プレイヤの入力モード変更
+            playerAction.inputMode_ = InputMode_Enum.MovePlayerCharacter_Mode;
+        }
     }
 }

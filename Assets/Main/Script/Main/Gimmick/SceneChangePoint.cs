@@ -16,7 +16,8 @@ namespace MainScenes
         void ChangeScene()
         {
             StackData.instance.lastDoorNumber = myId;
-            
+            var SaveAndLoadSystem = new SaveAndLoadSystem();
+            SaveAndLoadSystem.SaveSystem();
             var SceneChangeSystem = new SceneChange_System();
             SceneChangeSystem.ChangeSceneSystem(MapChangeSceneName_);
         }
