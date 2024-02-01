@@ -14,6 +14,10 @@ namespace MainScenes
                     return "”š‚Ì‘‚©‚ê‚½†(¶) 01";
                 case ItemName_Enum.Password_RightDoor_01:
                     return "”š‚Ì‘‚©‚ê‚½†(‰E) 01";
+                case ItemName_Enum.Password_LeftDoor_02:
+                    return "”š‚Ì‘‚©‚ê‚½†(¶) 02";
+                case ItemName_Enum.Password_RightDoor_02:
+                    return "”š‚Ì‘‚©‚ê‚½†(‰E) 02";
                 default:
                     return "";
             }

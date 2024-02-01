@@ -4,5 +4,6 @@ namespace MainScenes
     {
         NoMission,
         Mission_01,
+        Mission_02,
     }
 }

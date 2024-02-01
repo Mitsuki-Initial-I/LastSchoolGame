@@ -10,5 +10,7 @@ namespace MainScenes
         Light_Left,
         LeftRoom_Hint_Password_01,
         RightRoom_Hint_Password_01,
+        LeftRoom_Hint_Password_02,
+        RightRoom_Hint_Password_02,
     }
 }

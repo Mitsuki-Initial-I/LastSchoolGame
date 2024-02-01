@@ -22,6 +22,9 @@ namespace MainScenes
                     case RoomId_R_Enum.Mission_01:
                         stages[(int)RoomId_R_Enum.Mission_01].SetActive(true);
                         break;
+                    case RoomId_R_Enum.Mission_02:
+                        stages[(int)RoomId_R_Enum.Mission_02].SetActive(true);
+                        break;
                     default:
                         break;
                 }
@@ -35,6 +38,9 @@ namespace MainScenes
                         break;
                     case RoomId_L_Enum.Mission_01:
                         stages[(int)RoomId_L_Enum.Mission_01].SetActive(true);
+                        break;
+                    case RoomId_L_Enum.Mission_02:
+                        stages[(int)RoomId_L_Enum.Mission_02].SetActive(true);
                         break;
                     default:
                         break;
