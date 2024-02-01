@@ -47,5 +47,10 @@ namespace MainScenes
             // プレイヤの入力モード変更
             playerAction.inputMode_ = InputMode_Enum.MovePlayerCharacter_Mode;
         }
+        public void ChangeTitleScene()
+        {
+            var SceneChangeSystem = new SceneChange_System();
+            SceneChangeSystem.ChangeSceneSystem(0);
+        }
     }
 }

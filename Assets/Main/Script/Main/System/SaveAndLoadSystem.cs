@@ -14,6 +14,14 @@ namespace MainScenes
             fileName = folderPath + fileName;
             return Directory.Exists(folderPath) && File.Exists(fileName);
         }
+        public void FolderDelete()
+        {
+            foreach (string filename in Directory.GetFiles(folderPath)) 
+            {
+                File.Delete(filename);
+            }
+            Directory.Delete(folderPath);
+        }
         public void SaveSystem()
         {
             var saveDatabese = new SaveData();

@@ -32,5 +32,25 @@ namespace MainScenes
         {
             panel.SetActive(false);
         }
+        
+        private void Update()
+        {
+            if(Input.GetKey(KeyCode.Tab)&& Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.P))
+            {
+                SaveAndLoadSystem saveAndLoadSystem = new SaveAndLoadSystem();
+                if (saveAndLoadSystem.CheckSaveData())
+                {
+                    saveAndLoadSystem.FolderDelete();
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;//ゲームプレイ終了
+#else
+    Application.Quit();//ゲームプレイ終了
+#endif
+            }
+        }
     }
 }
