@@ -8,6 +8,8 @@ namespace MainScenes
     {
         public static StackData instance;
         public int lastDoorNumber;
+        public PlayNumCountData playNumCountData=new PlayNumCountData();
+
         private void Awake()
         {
             if (instance == null)

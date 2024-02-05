@@ -5,5 +5,6 @@ namespace MainScenes
         NoMission,
         Mission_01,
         Mission_02,
+        Mission_03,
     }
 }

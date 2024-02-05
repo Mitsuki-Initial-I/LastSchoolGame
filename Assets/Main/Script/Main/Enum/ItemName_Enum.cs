@@ -12,5 +12,6 @@ namespace MainScenes
         Password_RightDoor_01,
         Password_LeftDoor_02,
         Password_RightDoor_02,
+        Password_LeftDoor_03,
     }
 }

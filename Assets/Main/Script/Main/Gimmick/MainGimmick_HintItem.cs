@@ -34,6 +34,7 @@ namespace MainScenes
             if (getnonGimmickNumList.Count == 0) return;
             int setNumber = Random.Range(0, getnonGimmickNumList.Count);
             gimmickObjects[getnonGimmickNumList[setNumber]].gameObject.SetActive(true);
+            Debug.Log(getnonGimmickNumList[setNumber]);
         }
     }
 }

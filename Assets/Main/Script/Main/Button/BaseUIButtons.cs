@@ -10,6 +10,8 @@ namespace MainScenes
         GameObject menuPanel;
         [SerializeField]
         GameObject myItemPanel;
+        [SerializeField]
+        GameObject hintPanel;
 
         IGetKeyData getKeyData;
         PlayerAction playerAction;
@@ -51,6 +53,12 @@ namespace MainScenes
         {
             var SceneChangeSystem = new SceneChange_System();
             SceneChangeSystem.ChangeSceneSystem(0);
+        }
+        public void HintButton()
+        {
+            hintPanel.SetActive(true);
+            PlayerAction playerAction = GameObject.Find("P").GetComponent<PlayerAction>();
+            playerAction.inputMode_++;
         }
     }
 }

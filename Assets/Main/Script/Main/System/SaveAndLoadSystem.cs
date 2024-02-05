@@ -32,13 +32,13 @@ namespace MainScenes
             saveDatabese.roomClear_L = StackData.instance.gameObject.GetComponent<RoomData>().roomClear_L;
 
             var accessSystem = new DataAccessSystem();
-            accessSystem.SaveFileSystem($"{Application.persistentDataPath}/SaveData/", "playSaveData.json", saveDatabese);
+            accessSystem.SaveFileSystem(folderPath, fileName, saveDatabese);
         }
         public void LoadSystem()
         {
             var saveDatabese = new SaveData();
             var accessSystem = new DataAccessSystem();
-            accessSystem.LoadFileSystem($"{Application.persistentDataPath}/SaveData/", "playSaveData.json", out saveDatabese);
+            accessSystem.LoadFileSystem(folderPath, fileName, out saveDatabese);
             StackData.instance.gameObject.GetComponent<GimmickClearData>().gimmickClearNum = saveDatabese.gimmickClearNum;
             StackData.instance.gameObject.GetComponent<MyItemData>().myItem = saveDatabese.myItem ;
             StackData.instance.gameObject.GetComponent<RoomData>().roomClear_R = saveDatabese.roomClear_R;
